@@ -1,0 +1,56 @@
+.task-input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+    gap: 10px; 
+  }
+  
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+  }
+  
+  .input-field {
+    flex: 1; 
+    padding: 10px 16px;
+    border: 2px solid white; 
+    border-radius: 30px; 
+    background: transparent; 
+    color: white;
+    font-size: 1rem;
+    outline: none; 
+    transition: border-color 0.3s ease;  
+  }
+  
+  .input-field::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .input-field:focus {
+    border-color: #f0d88e; 
+  }
+  
+
+  .add-button {
+    width: 45px;
+    height: 45px;
+    border: 2px solid white; 
+    border-radius: 50%; 
+    background-color: #f0d88e;
+    color: white; 
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+    transition: all 0.3s ease;
+  }
+  
+  .add-button:hover {
+    background-color: #f5e3a8; 
+    transform: scale(1.1); 
+  }
+  

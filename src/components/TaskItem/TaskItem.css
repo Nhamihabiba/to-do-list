@@ -1,0 +1,40 @@
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    margin: 8px 0;
+    border-radius: 15px; 
+    background-color: rgba(94, 51, 96, 0.8); 
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .task-item:hover {
+    background-color: rgba(111, 61, 115, 0.9); 
+  }
+  
+  .task-item button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  .cont input{
+    width: 1.5em;
+    height: 1.5em;  
+  }
+  .cont span{
+    margin-left: 10px;
+    font-weight: bold;
+  }
+  
+  .task-item button:hover {
+    transform: scale(1.2);
+    color: #f1948a; 
+  }
+  
