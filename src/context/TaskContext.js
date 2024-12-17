@@ -30,7 +30,7 @@ export const TaskProvider = ({ children }) => {
   
     
     const addNewTask = async (taskName) => {
-      const newTask = { name: taskName, completed: false };
+      const newTask = { title: taskName, is_completed: false };
       const addedTask = await addTask(newTask);
       setTasks([...tasks, addedTask]);
     };
@@ -38,7 +38,7 @@ export const TaskProvider = ({ children }) => {
     
     const toggleTaskCompletion = async (taskId) => {
       const taskToUpdate = tasks.find((task) => task.id === taskId);
-      const updatedTask = { ...taskToUpdate, completed: !taskToUpdate.completed };
+      const updatedTask = { ...taskToUpdate, is_completed: !taskToUpdate.is_completed };
       await updateTask(taskId, updatedTask);
       setTasks(
         tasks.map((task) =>
@@ -55,8 +55,8 @@ export const TaskProvider = ({ children }) => {
 
  
   const filteredTasks = tasks.filter((task) => {
-    if (filter === "completed") return task.completed;
-    if (filter === "uncompleted") return !task.completed;
+    if (filter === "completed") return task.is_completed;
+    if (filter === "uncompleted") return !task.is_completed;
     return true; 
   });
 

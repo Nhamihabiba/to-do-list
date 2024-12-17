@@ -13,10 +13,10 @@ function TaskItem({ task }) {
       <div class ="cont">  
       <input
         type="radio"
-        checked={!task.completed}
+        checked={!task.is_completed}
         onChange={() => toggleTaskCompletion(task.id)} 
       />  
-      <span>{task.name}</span>
+      <span>{task.title}</span>
       </div>
       <button onClick={(e) => { e.stopPropagation(); removeTask(task.id); }}>
         ✕

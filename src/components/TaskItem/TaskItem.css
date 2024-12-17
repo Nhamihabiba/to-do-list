@@ -3,13 +3,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 16px;
-    margin: 8px 0;
-    border-radius: 15px; 
-    background-color: rgba(94, 51, 96, 0.8); 
+    margin: 8px 0; 
+    border: 1px solid white;
+    background-color: #313171; 
     color: white;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; 
   }
   
   .task-item:hover {
@@ -23,6 +23,10 @@
     font-size: 1.2rem;
     cursor: pointer;
     transition: transform 0.2s ease;
+  }
+  .cont{
+   display: flex;
+   align-items: center;
   }
   .cont input{
     width: 1.5em;

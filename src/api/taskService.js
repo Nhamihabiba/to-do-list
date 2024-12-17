@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000/api/tasks";
+const API_URL = "http://127.0.0.1:8000/api/tasks/"; 
 
 export const fetchTasks = async () => {
   const response = await fetch(API_URL);
@@ -15,7 +15,7 @@ export const addTask = async (task) => {
 };
 
 export const updateTask = async (taskId, updatedTask) => {
-  const response = await fetch(`${API_URL}/${taskId}`, {
+  const response = await fetch(`${API_URL}${taskId}/`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(updatedTask),
@@ -24,5 +24,5 @@ export const updateTask = async (taskId, updatedTask) => {
 };
 
 export const deleteTask = async (taskId) => {
-  await fetch(`${API_URL}/${taskId}`, { method: "DELETE" }); 
+  await fetch(`${API_URL}${taskId}/`, { method: "DELETE" });  
 };
